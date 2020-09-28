@@ -1,0 +1,25 @@
+{% extends "book/book_form.html" %}
+
+
+{% block content %}
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Count</td>
+            <td>Authors</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in book_list %}
+            <tr>
+                <td>{{book.name}}</td>
+                <td>{{book.description}}</td>
+                <td>{{book.count}}</td>
+                <td>{{book.authors}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

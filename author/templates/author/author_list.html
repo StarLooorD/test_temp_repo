@@ -1,0 +1,23 @@
+{% extends "author/author_form.html" %}
+
+
+{% block content %}
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>Name</td>
+            <td>Surname</td>
+            <td>Patronymic</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for author in author_list %}
+            <tr>
+                <td>{{author.name}}</td>
+                <td>{{author.surname}}</td>
+                <td>{{author.patronymic}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
